@@ -177,6 +177,13 @@ if ($_GET["staff"] == "") {
 } else {
     $staff = $_GET["staff"];
 }
+
+if ($_GET["star"] == "") {
+    $star = "ram4.png";
+} else {
+    $star = $_GET["star"];
+}
+
 ?>
 
 
@@ -708,8 +715,9 @@ nav {
     ?>
     <!-- <img src="img/golibuk.png" width="310px" class="heropic"> -->
 
-    
+  
     <img id="weaponBackground" src="img/weapon_background.png">
+
 
     <?php 
     
@@ -757,7 +765,11 @@ nav {
     
 
     <div class="frame">
-        <img src="img/ram4.png" width="320px">
+        <?php 
+        echo <<<END
+            <img src="img/$star" width="320px">
+        END;
+        ?>
     </div>
 
     <div class="header">
@@ -1186,6 +1198,11 @@ if($bow == "true") {$bowSelected = " checked";} else {$bowSelected = "";}
 if($staff == "true") {$staffSelected = " checked";} else {$staffSelected = "";}
 //echo "effect1: $effect1 $mechanicSelected <br>";
 
+if($star == "ram1.png") {$oneStarSelected = " selected";} else {$oneStarSelected = "";}
+if($star == "ram2.png") {$twoStarSelected = " selected";} else {$twoStarSelected = "";}
+if($star == "ram3.png") {$threeStarSelected = " selected";} else {$threeStarSelected = "";}
+if($star == "ram4.png") {$fourStarSelected = " selected";} else {$fourStarSelected = "";}
+
 echo <<<END
 
     <form action="index.php" method="get">
@@ -1208,6 +1225,13 @@ echo <<<END
 
         Životy hrdiny: <input type="number" name="heroHp" value="$heroHp" min="1" max="99"> <br>
         Týmové životy hrdiny: <input type="number" name="heroTeamHp" value="$heroTeamHp" min="1" max="9"> <br>
+        Počet hvězd hrdiny:
+        <select name="star" class="select">
+            <option value="ram1.png"$oneStarSelected>1*</option>
+            <option value="ram2.png"$twoStarSelected>2*</option>
+            <option value="ram3.png"$threeStarSelected>3*</option>
+            <option value="ram4.png"$fourStarSelected>4*</option>
+        </select> <br>
 
         Zbraně hrdiny: <br>
         <input type="checkbox" name="sword" value="true" $swordSelected> Meč <br>
