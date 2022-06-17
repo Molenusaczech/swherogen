@@ -2,6 +2,8 @@
 
 error_reporting(0);
 
+$switchedEffects = array("trigger.png", "night.png", "mechanic.png");
+
 if ($_GET["heroName"] == "") {
     $heroName = "Jméno hrdiny";
 } else {
@@ -534,6 +536,159 @@ nav {
     width: 25px;
 }
 
+#switchedeffect1 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 348px;
+    left: 33px;
+}
+
+#switchedvalue1 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 343px;
+    left: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect2 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 379px;
+    left: 33px;
+}
+
+#switchedvalue2 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 374px;
+    left: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect3 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 345px;
+    left: 105px;
+}
+
+#switchedvalue3 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 340px;
+    left: 132px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect4 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 376px;
+    left: 105px;
+}
+
+#switchedvalue4 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 371px;
+    left: 130px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect5 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 348px;
+    left: 172px;
+}
+
+#switchedvalue5 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 344px;
+    left: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect6 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 380px;
+    left: 172px;
+}
+
+#switchedvalue6 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 377px;
+    left: 200px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect7 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 345px;
+    left: 244px;
+}
+
+#switchedvalue7 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 340px;
+    left: 270px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#switchedeffect8 {
+    width: 22px;
+    position: absolute;
+    z-index: 30;
+    top: 376px;
+    left: 244px;
+}
+
+#switchedvalue8 {
+    font-size: 22px;
+    font-family: ScratchChizz;
+    position: absolute;
+    z-index: 30;
+    top: 371px;
+    left: 270px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
 </style> 
 
 </head>
@@ -641,6 +796,18 @@ nav {
 
     
 <?php 
+
+    if(in_array($effect1, $switchedEffects)) {
+
+    echo <<<END
+
+    <img src="img/$effect1" id="switchedeffect1">;
+
+    <div id="switchedvalue1">$value1</div>
+
+    END;
+} else {
+
     echo <<<END
         <img src="img/$effect1" id="effect1">;
     END;
@@ -653,7 +820,18 @@ nav {
         echo <<<END
         <div id="value1">+$value1</div>
         END;
-    }
+    } }
+
+    if(in_array($effect2, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect2" id="switchedeffect2">;
+    
+        <div id="switchedvalue2">$value2</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect2" id="effect2">;
@@ -667,7 +845,20 @@ nav {
         echo <<<END
         <div id="value2">+$value2</div>
         END;
-    }
+    } }
+
+
+
+    if(in_array($effect3, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect3" id="switchedeffect3">;
+    
+        <div id="switchedvalue3">$value3</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect3" id="effect3">;
@@ -681,7 +872,18 @@ nav {
         echo <<<END
         <div id="value3">+$value3</div>
         END;
-    }
+    } }
+
+    if(in_array($effect4, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect4" id="switchedeffect4">;
+    
+        <div id="switchedvalue4">$value4</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect4" id="effect4">;
@@ -695,7 +897,18 @@ nav {
         echo <<<END
             <div id="value4">+$value4</div>
         END;
-    }
+    } }
+
+    if(in_array($effect5, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect5" id="switchedeffect5">;
+    
+        <div id="switchedvalue5">$value5</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect5" id="effect5">;
@@ -709,7 +922,18 @@ nav {
         echo <<<END
             <div id="value5">+$value5</div>
         END;
-    }
+    } }
+
+    if(in_array($effect6, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect6" id="switchedeffect6">;
+    
+        <div id="switchedvalue6">$value6</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect6" id="effect6">;
@@ -723,7 +947,18 @@ nav {
         echo <<<END
             <div id="value6">+$value6</div>
         END;
-    }
+    } }
+
+    if(in_array($effect7, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect7" id="switchedeffect7">;
+    
+        <div id="switchedvalue7">$value7</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect7" id="effect7">;
@@ -737,7 +972,18 @@ nav {
         echo <<<END
             <div id="value7">+$value7</div>
         END;
-    }
+    } }
+
+    if(in_array($effect8, $switchedEffects)) {
+
+        echo <<<END
+    
+        <img src="img/$effect8" id="switchedeffect8">;
+    
+        <div id="switchedvalue8">$value8</div>
+    
+        END;
+    } else {
 
     echo <<<END
         <img src="img/$effect8" id="effect8">;
@@ -751,7 +997,7 @@ nav {
         echo <<<END
             <div id="value8">+$value8</div>
         END;
-    }
+    } }
 ?>
 
 
