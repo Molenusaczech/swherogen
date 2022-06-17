@@ -698,6 +698,21 @@ nav {
 
 </style> 
 
+<?php 
+//discord embed
+$link = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+echo <<<END
+    <meta content="$heroType - $heroName" property="og:title" />
+    <meta content="Hrdina vytvořený Moleho generátorem Scratch Wars Hrdinů" property="og:description" />
+    <meta content="$link" property="og:url" />
+    <meta content="https://swherogen.mole06.repl.co/img/$image" property="og:image" />
+    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+END;
+
+?>
+
+
 </head>
 <body>
     
